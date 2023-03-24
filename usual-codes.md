@@ -1,7 +1,7 @@
 ### code-note
 
 #### how to ssh / easy to ssh
-- 1 open the file `config`,
+- 1 open the file `config`
   ```
   vim ~/.ssh/config
 - 2 input next code to edit
@@ -9,4 +9,4 @@
   Host a100 # ssh hostname (custom)
     HostName 10.x.x.x   # IP adress
     User username       # username
-    Port 22		# port
+    Port 22	# port
