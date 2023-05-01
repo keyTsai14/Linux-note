@@ -47,7 +47,8 @@
   cat /root/.bash_history
 
   # コマンド実行の履歴確認
-  less ~/.bash_history 
+  less ~/.bash_history
+  ```
 
 #### how to upload file to cloud
 
