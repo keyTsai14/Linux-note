@@ -2,10 +2,10 @@
 
 #### how to ssh / easy to ssh
 - 1 open the file `config`
-  ```
+  ```bash
   vim ~/.ssh/config
 - 2 input next code to edit
-  ```
+  ```bash
   Host a100 # ssh hostname (custom)
     HostName 10.x.x.x   # IP adress
     User username       # username
