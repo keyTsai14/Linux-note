@@ -48,3 +48,9 @@ cat /root/.bash_history
 
 # コマンド実行の履歴確認
 less ~/.bash_history 
+
+#### how to upload file to cloud
+
+```bash
+# local -> 踏み台
+scp /path/to/local/file username@remote:/path/to/remote/directory/
