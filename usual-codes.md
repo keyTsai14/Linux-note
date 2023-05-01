@@ -18,3 +18,33 @@
   :wq
   # close without saving
   :q!
+
+#### history command
+```bash
+history
+
+history | grep  [検索したいコマンド]
+
+# cdコマンドが履歴にあるか調べる場合
+history | grep  cd
+
+# 履歴を削除する
+history -c
+
+# del history command
+history -d 番号
+
+# 履歴をファイルに保存 save history as file
+history -w history.txt
+
+# 末尾からの10行分表示 see info below last 10
+history 10
+
+# 一般ユーザー[user]の場合
+cat /home/user/.bash_history
+
+# rootユーザーの場合
+cat /root/.bash_history
+
+# コマンド実行の履歴確認
+less ~/.bash_history 
