@@ -55,3 +55,10 @@
 ```bash
 # local -> 踏み台
 scp /path/to/local/file username@remote:/path/to/remote/directory/
+```
+
+#### copy file
+```bash
+# copy file with date
+cp -p a.txt b/a.txt_`date "+%Y%m%d"`
+```
