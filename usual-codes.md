@@ -57,8 +57,55 @@
 scp /path/to/local/file username@remote:/path/to/remote/directory/
 ```
 
+#### create file
+`touch`
+```bash
+touch filename
+```
+
 #### copy file
+`cp`
 ```bash
 # copy file with date
 cp -p a.txt b/a.txt_`date "+%Y%m%d"`
+```
+
+#### move file
+`mv`
+```bash
+# change filename
+mv originname targetname
+
+# move file to path
+mv originpath targetpath
+```
+
+#### create dictionary
+`mkdir`
+```bash
+# new a dictionary
+mkdir foldername
+
+# make a dictionary like test/test1/test2/test3
+mkdir -p test/test1/test2/test3
+```
+
+#### del dictionary
+`rmkdir`
+```bash
+# del dictionary
+rmkdir foldername
+
+# make a dictionary like test/test1/test2/test3
+rmdir test/test1/test2/test3
+```
+
+#### del file or folder
+`rm`
+```bash
+# Force delete
+rm -rf [#folder/#file]
+
+# del after confirm 
+rm -ri [#folder/#file]
 ```
