@@ -111,12 +111,7 @@ rm -ri [#folder/#file]
 ```
 
 #### how to select global ip address
-`ifconfig`
-```bash
-
-```
-
-`ip addr show`
+`ifconfig` or `ip addr show`
 ```bash
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
@@ -158,7 +153,31 @@ IPv4 地址: 172.17.0.1
 根据上述信息，您的全局IPv4地址是eth0接口上的10.0.12.9。这是您在网络上识别和连接到您的Linux系统所使用的IP地址。请注意，这个地址是您当前连接到的网络中的局域网IP地址，如果您希望知道您的公共IP地址（全球IP地址），您需要使用外部服务来查询，如之前提到的在线IP查询服务。
 ```
 
-`ip addr show`
+`hostname -I`
 ```bash
 10.0.12.9 172.17.0.1
 ```
+
+
+#### how to know linux architectures(Intel or ARM)
+`uname -m`
+```bash
+如果输出是 "x86_64" 或 "amd64"，则表示你的系统是基于Intel 64位架构的。
+如果输出是 "arm" 或 "aarch64"，则表示你的系统是基于ARM架构的。例如，输出为 "armv7l" 表示ARMv7架构。
+```
+
+`lscpu`
+```bash
+在输出中，查找 "Architecture" 行，它会告诉你系统的架构。
+如果是 "x86_64"，则为Intel 64位架构，如果是 "aarch64"，则为ARM 64位架构，如果是 "armv7l"，则为ARMv7架构。
+```
+
+`cat /proc/cpuinfo`
+```bash
+在输出中，查找 "CPU architecture" 或 "model name" 行，它们通常会提供有关CPU架构的信息。
+同样，"x86_64"表示Intel 64位架构，"aarch64"表示ARM 64位架构，"armv7l"表示ARMv7架构。
+```
+
+
+
+
