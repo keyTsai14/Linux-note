@@ -195,5 +195,40 @@ sort：sort 命令用于按字母顺序对文本行进行排序。
 因此，这个命令将处理与特定模式匹配的文件，搜索包含 "t.png"、"t=c" 和 "c=3" 的行，然后对结果进行排序，最后将它们保存到指定的日志文件中。
 ```
 
+#### grep でAND検索とOR検索をする方法
+`grep`
+- grepで複数の文字列を検索する方法（OR検索）
+書式：`grep -e 【検索文字列】 -e 【検索文字列】 【ファイル名】`
+```bash
+cat test
+Shiga
+Kyoto
+Osaka
+Hyogo
+Nara
+Wakayama
 
+$ grep -e Kyoto -e Osaka test
+Kyoto
+Osaka
+$ grep -e Kyoto -e Tokyo test
+Kyoto
+```
+`egrep`
+- egrepで複数の文字列を検索する方法（OR検索）
+書式：`egrep “【検索する文字列】|【検索する文字列】"  【ファイル名】`
+```bash
+cat test
+Shiga
+Kyoto
+Osaka
+Hyogo
+Nara
+Wakayama
 
+$ egrep "Kyoto|Nara" test
+Kyoto
+Nara
+```
+- grepで複数の文字列を絞り込んで検索する方法（AND検索）
+書式：`grep 【検索文字列】 【ファイル名】 | grep 【検索文字列】`
